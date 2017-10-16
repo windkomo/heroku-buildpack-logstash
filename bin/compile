@@ -40,7 +40,7 @@ esac
 mkdir="mkdir -p"
 download="curl -sLO"
 extract="$tar -C $BUILD_DIR --wildcards -f"
-verify="sha1sum --check --warn"
+verify="sha512sum --check --warn"
 
 echo "-----> Installing Logstash..."
 
