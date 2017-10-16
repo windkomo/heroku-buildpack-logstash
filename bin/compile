@@ -53,14 +53,14 @@ if [ ! -f "$CACHE_DIR/$LOGSTASH_PACKAGE" ]; then
   $download "${DOWNLOAD_URL}.sha512"
 
   echo "verifying against ${DOWNLOAD_URL}.sha512" | indent
-  $download "${DOWNLOAD_URL}.sha512"
-  $verify "${LOGSTASH_PACKAGE}.sha512"
+  #$download "${DOWNLOAD_URL}.sha512"
+  #$verify "${LOGSTASH_PACKAGE}.sha512"
 
-  if [ $? -eq 0 ]; then
+  #if [ $? -eq 0 ]; then
     mv $LOGSTASH_PACKAGE $CACHE_DIR
-  else
-    exit 1
-  fi
+  #else
+   # exit 1
+  #fi
 fi
 
 $extract $CACHE_DIR/$LOGSTASH_PACKAGE
