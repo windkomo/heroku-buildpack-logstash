@@ -50,6 +50,7 @@ $mkdir $CACHE_DIR
 if [ ! -f "$CACHE_DIR/$LOGSTASH_PACKAGE" ]; then
   echo "downloading $DOWNLOAD_URL" | indent
   $download $DOWNLOAD_URL
+  $download "${DOWNLOAD_URL}.sha512"
 
   echo "verifying against ${DOWNLOAD_URL}.sha512" | indent
   $download "${DOWNLOAD_URL}.sha512"
